@@ -1,0 +1,79 @@
+.socialSection {
+  padding: 4rem 1rem;
+  text-align: center;
+}
+
+.socialSection h2 {
+  font-size: 2.5rem;
+  font-weight: 800;
+  margin-bottom: 2rem;
+  color: rgb(217, 176, 255);
+  text-shadow: 0 0 0.3em rgba(191, 123, 255, 0.781);
+}
+
+.iconList {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 4rem;
+  margin-top: 2rem;
+}
+
+.iconList li {
+  list-style: none;
+}
+
+.iconBox {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 60px;
+  height: 60px;
+  background: #e6c4ff;
+  text-align: center;
+  transform: perspective(1000px) rotate(-30deg) skew(25deg);
+  transition: 0.5s linear;
+  box-shadow: -20px 20px 10px rgba(0, 0, 0, 0.5);
+}
+
+.iconBox::before {
+  content: "";
+  position: absolute;
+  top: 10px;
+  left: -20px;
+  height: 100%;
+  width: 20px;
+  background: rgba(217, 176, 255, 0.6);
+  transform: rotate(0deg) skewY(-45deg);
+  transition: 0.5s;
+}
+
+.iconBox::after {
+  content: "";
+  position: absolute;
+  bottom: -20px;
+  left: -10px;
+  height: 20px;
+  width: 100%;
+  background: rgba(191, 123, 255, 0.5);
+  transform: rotate(0deg) skewX(-45deg);
+  transition: 0.5s;
+}
+
+.iconBox:hover {
+  transform: perspective(1000px) rotate(-30deg) skew(25deg) translate(20px, -20px);
+  box-shadow: -50px 50px 50px rgba(0, 0, 0, 0.5);
+}
+
+.iconBox:hover .icon {
+  color: rgb(0, 0, 0);
+}
+
+.icon {
+  font-size: 30px;
+  color: #5f009a;
+  line-height: 60px;
+  transition: 0.5s;
+}

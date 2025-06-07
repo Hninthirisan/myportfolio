@@ -1,0 +1,86 @@
+:root {
+  --glow-color: rgb(217, 176, 255);
+  --glow-spread-color: rgba(191, 123, 255, 0.781);
+  --enhanced-glow-color: rgb(231, 206, 255);
+}
+
+.card {
+  padding-top: 50px;
+  border-radius: 30px;
+  transform-style: preserve-3d;
+  background: linear-gradient(135deg, #3b0764, #6b21a8, #a21caf);
+  background-size: cover;
+  background-position: center;
+  background-color: #3b0764;
+  width: 100%;
+  box-shadow:
+    0 0 1px var(--glow-color),
+    0 0 2px var(--glow-spread-color),
+    0 0 3px var(--glow-color),
+    0 0 5px var(--enhanced-glow-color);
+  transition: all 0.5s ease-in-out;
+  position: relative;
+  overflow: hidden;
+}
+
+.card:hover {
+  background-position:
+    -100px 100px,
+    -100px 100px;
+  transform: rotate3d(0.5, 1, 0, 20deg);
+  box-shadow:
+    0 0 5px var(--glow-color),
+    0 0 10px var(--glow-spread-color),
+    0 0 15px var(--glow-color),
+    0 0 20px var(--enhanced-glow-color);
+}
+
+.content-box {
+  background: transparent;
+  padding: 60px 25px 25px 25px;
+  transform-style: preserve-3d;
+  border-radius: 0 0 30px 30px;
+}
+
+.card-title {
+  display: inline-block;
+  color: white;
+  font-size: 22px;
+  font-weight: 900;
+  transform: translate3d(0, 0, 50px);
+}
+
+.card-content {
+  margin-top: 10px;
+  font-size: 13px;
+  font-weight: 600;
+  color: #f3f3f3;
+  transform: translate3d(0, 0, 30px);
+}
+
+.see-more {
+  cursor: pointer;
+  margin-top: 1rem;
+  display: inline-block;
+  font-weight: 900;
+  font-size: 10px;
+  text-transform: uppercase;
+  color: #ec4899;
+  background: white;
+  padding: 0.5rem 0.7rem;
+  border-radius: 6px;
+  transform: translate3d(0, 0, 20px);
+}
+
+.date-box {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  height: 60px;
+  width: 60px;
+  background: white;
+  border-radius: 10px;
+  padding: 0;
+  overflow: hidden;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 17px 10px -10px;
+}
